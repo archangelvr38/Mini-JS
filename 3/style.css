@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e0e5ec; /* Soft gray for Neumorphism */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.quote-container {
+  background-color: #e0e5ec;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 20px 20px 60px #bec3c9, -20px -20px 60px #ffffff;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.2rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+#quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.8rem;
+  color: #333;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  min-height: 120px; /* Prevents layout jump when text changes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Quote marks styling */
+#quote::before { content: '“'; font-size: 4rem; color: #a3b1c6; display: block; height: 90px; transform: translate(-20px, -10px); opacity: 0.5; }
+#quote::after { content: '”'; font-size: 4rem; color: #a3b1c6; display: block; height: 50px; transform: translate(10px, 20px); opacity: 0.5; }
+
+button {
+  background-color: #e0e5ec;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #6d7587;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 6px 6px 12px #bec3c9, -6px -6px 12px #ffffff;
+}
+
+button:hover {
+  color: #333;
+  box-shadow: 3px 3px 6px #bec3c9, -3px -3px 6px #ffffff;
+}
+
+button:active {
+  box-shadow: inset 4px 4px 8px #bec3c9, inset -4px -4px 8px #ffffff;
+  transform: scale(0.98);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  #quote { font-size: 1.4rem; }
+  .quote-container { padding: 25px; }
+}
